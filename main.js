@@ -18,8 +18,7 @@ client.on("ready", message => {
 client.on("message", async message => {
 
     if(channelID.indexOf(message.channel.id)>-1 && !message.author.bot && !message.content.startsWith("//")){
-        bouyomiTalk(message.author.username);
-        bouyomiTalk(message.content);
+        bouyomiTalk(`${message.author.username}\n${message.content}`);
     }
 
     if(message.content.startsWith(BOT_DATA.PREFIX)){
